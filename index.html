@@ -2,12 +2,10 @@
   <title>Yunbo Wang's home page</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
   <style>
-    /* 全局字体设置，让整体呈现类似分类标签的清爽视觉 */
     body, table, td, th, p, li, h1, h2, h3, a {
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
     
-    /* 全局超链接样式，统一使用分类标签的蓝色 */
     a {
       color: #0056b3;
       text-decoration: none;
@@ -17,7 +15,6 @@
       text-decoration: underline;
     }
 
-    /* 筛选按钮的样式 */
     .publication-filters {
       margin-bottom: 25px;
       font-size: 16px;
@@ -36,13 +33,12 @@
       background-color: #f0f0f0;
     }
     .filter-btn.active {
-      color: #BB2222; /* 使用你主页的红色作为高亮色 */
+      color: #BB2222; 
       font-weight: bold;
       text-decoration: none;
       pointer-events: none; 
     }
     
-    /* 列表样式：去掉 bullet 前面的多余空格，实现左对齐 */
     ul {
       padding-left: 18px; 
       margin-left: 0;
@@ -52,16 +48,14 @@
     }
     .pub-item {
       margin-bottom: 20px; 
-      line-height: 1.6; /* 让多行文本阅读起来更舒适 */
+      line-height: 1.6; 
     }
 
-    /* 底部四个板块的行距调整 */
     .info-list li {
       margin-bottom: 12px;
       line-height: 1.6;
     }
 
-    /* 分割线样式 */
     .section-divider {
       border: 0;
       height: 1px;
@@ -499,7 +493,6 @@ function filterPublications(topic) {
   const pubs = document.querySelectorAll('.pub-item');
   const buttons = document.querySelectorAll('.filter-btn');
 
-  // 更新按钮的激活状态
   buttons.forEach(btn => {
     btn.classList.remove('active');
     if(btn.getAttribute('onclick').includes(topic)) {
@@ -507,14 +500,13 @@ function filterPublications(topic) {
     }
   });
 
-  // 遍历所有论文进行筛选
   pubs.forEach(pub => {
     if (topic === 'all') {
-      pub.style.display = 'list-item'; // 恢复为 list-item 以显示黑点
+      pub.style.display = 'list-item';
     } else {
       const topics = pub.getAttribute('data-topic');
       if (topics && topics.split(' ').includes(topic)) {
-        pub.style.display = 'list-item'; // 恢复为 list-item 以显示黑点
+        pub.style.display = 'list-item';
       } else {
         pub.style.display = 'none';
       }
