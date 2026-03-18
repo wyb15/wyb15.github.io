@@ -1,7 +1,76 @@
 <head>
   <title>Yunbo Wang's home page</title>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <style>
+    /* 全局字体设置，让整体呈现类似分类标签的清爽视觉 */
+    body, table, td, th, p, li, h1, h2, h3, a {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    
+    /* 全局超链接样式，统一使用分类标签的蓝色 */
+    a {
+      color: #0056b3;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 筛选按钮的样式 */
+    .publication-filters {
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .filter-btn {
+      color: #0056b3;
+      text-decoration: none;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: 4px;
+      transition: background-color 0.2s, color 0.2s;
+    }
+    .filter-btn:hover {
+      text-decoration: underline;
+      background-color: #f0f0f0;
+    }
+    .filter-btn.active {
+      color: #BB2222; /* 使用你主页的红色作为高亮色 */
+      font-weight: bold;
+      text-decoration: none;
+      pointer-events: none; 
+    }
+    
+    /* 列表样式：去掉 bullet 前面的多余空格，实现左对齐 */
+    ul {
+      padding-left: 18px; 
+      margin-left: 0;
+    }
+    .pub-list {
+      list-style-type: disc;
+    }
+    .pub-item {
+      margin-bottom: 20px; 
+      line-height: 1.6; /* 让多行文本阅读起来更舒适 */
+    }
+
+    /* 底部四个板块的行距调整 */
+    .info-list li {
+      margin-bottom: 12px;
+      line-height: 1.6;
+    }
+
+    /* 分割线样式 */
+    .section-divider {
+      border: 0;
+      height: 1px;
+      background: #e0e0e0;
+      margin: 30px 0;
+    }
+  </style>
 </head>
+<body>
   <table width="900" border="0" align="center" cellspacing="0" cellpadding="20">
     <tbody><tr>
     <td>
@@ -11,410 +80,446 @@
         <h1><strong>Yunbo WANG</strong></h1>
         <p><b>Associate Professor<br>
           Artificial Intelligence Institute, School of Computer Science<br>
-	  Shanghai Jiao Tong University</b>
+          Shanghai Jiao Tong University</b>
         </p>
-	<p>
-	Email: yunbow@sjtu.edu.cn<br>
-	Mail: 5-514, Software Building, 800 Dongchuan RD, Shanghai 200240<br>
-	<a target='_blank' href='https://scholar.google.com/citations?user=C8bGfr0AAAAJ'>Google Scholar</a>
+        <p>
+        Email: yunbow@sjtu.edu.cn<br>
+        Mail: 5-514, Software Building, 800 Dongchuan RD, Shanghai 200240<br>
+        <a target='_blank' href='https://scholar.google.com/citations?user=C8bGfr0AAAAJ'>Google Scholar</a>
         </p>
         </td>
         <td width="5%">
         </td>
         <td width="25%">
-        <img src="yunbo.jpg" width = '172' height = '240'>
+        <img src="yunbo.png" width='320' height='190'>
         </td>
       </tr>
   </tbody></table>
 
+<hr class="section-divider">
 
-<br>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
 <tbody><tr><td>
       Our group's research lies in the intersection of machine learning and computer vision, aiming to advance computational understanding of real-world dynamics. We investigate this through intuitive physical inference and model-based reinforcement learning, aiming to equip agents with purposeful imagination capabilities that generalize and scale across complex, open-world scenarios.
     <br><br>
       I received my Ph.D. and M.E. degrees from Tsinghua University, advised by <a target='_blank' href="https://www.cs.uic.edu/PSYu/">Philip S. Yu</a>, 
-	<a target='_blank' href="http://ise.thss.tsinghua.edu.cn/~mlong/">Mingsheng Long</a>, 
-	and <a target='_blank' href="https://www.thss.tsinghua.edu.cn/en/faculty/yangdongdeng.htm">Yangdong Deng</a>, 
-	and my B.S. degree from Xi'an Jiaotong University. 
+    <a target='_blank' href="http://ise.thss.tsinghua.edu.cn/~mlong/">Mingsheng Long</a>, 
+    and <a target='_blank' href="https://www.thss.tsinghua.edu.cn/en/faculty/yangdongdeng.htm">Yangdong Deng</a>, 
+    and my B.S. degree from Xi'an Jiaotong University. 
       I also spent time in <a target='_blank' href="http://web.mit.edu/cocosci/josh.html">Josh Tenenbaum</a>'s lab at MIT working with <a target='_blank' href="https://jiajunwu.com/">Jiajun Wu</a> in probabilistic planning and model-based reinforcement learning.
     <br><br>
       For prospective graduate students:
       I appreciate your interest in joining our group! We have <b><font color='#BB2222'>0 open position</font></b> for Ph.D. students and <b><font color='#BB2222'>1 open position</font></b> for Master students in <b><font color='#BB2222'>Class 2026</font></b> in <a target='_blank' href="https://www.cs.sjtu.edu.cn/en/Faculty.aspx">School of Computer Science</a>.
     <br><br>
-	  We organized the <a target='_blank' href="https://embodied-world-models.github.io/">NeurIPS 2025 Workshop on Embodied World Models for Decision Making</a>.
-	<br>
-	
+    
  <h2>Publications</h2>
-  <ol>
-    <li><strong>EMGauss: Continuous Slice-to-3D Reconstruction via Dynamic Gaussian Modeling in Volume Electron Microscopy</strong><br>
-	<font size="2">Yumeng He, Zanwei Zhou, Yekun Zheng, Chen Liang, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    <span><b><font color='#BB2222'>CVPR 2026</font></b></span>
-		[<a target='_blank' href="https://arxiv.org/abs/2512.06684">PDF</a>]
-		[<a target='_blank' href="https://raynehe.github.io/EMGauss/">Website</a>]
-	</font></li><br>
-	
-	<li><strong>Goal-Driven Reward by Video Diffusion Models for Reinforcement Learning</strong><br>
-	<font size="2">Qi Wang, Mian Wu, Yuyang Zhang, Mingqi Yuan, Wenyao Zhang, Haoxiang You, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings"></span></b>, Xin Jin, Xiaokang Yang, Wenjun Zeng<br>
-	    <span><b><font color='#BB2222'>CVPR 2026</font></b></span>
-	</font></li><br>
-	  
-	<li><strong>MetaTrader: Learning to Generalize RL Trading Policies Beyond Offline Data</strong><br>
-	<font size="2">Haochen Yuan*, Minting Pan*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Siyu Gao, Xiaokang Yang<br>
-	    <span><b><font color='#BB2222'>AAAI 2026</font></b></span>
-		[<a target='_blank' href="https://arxiv.org/pdf/2505.12759">PDF</a>]
-	</font></li><br>
-	  
-	<li><strong>MetaGS: A Meta-Learned Gaussian-Phong Model for Out-of-Distribution 3D Scene Relighting</strong><br>
-	<font size="2">Yumeng He, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-		<span><b><font color='#BB2222'>NeurIPS 2025 Spotlight (Top 3.5%)</font></b></span>
-	    [<a target='_blank' href="https://openreview.net/pdf/675dbaee7a026ed452592654e399e8d651729a04.pdf">PDF</a>]
-	    [<a target='_blank' href="https://raynehe.github.io/MetaGS/">Website</a>]
-	    [<a target='_blank' href="https://github.com/raynehe/MetaGS">PyTorch Code</a>]
-		[<a target='_blank' href="https://drive.google.com/drive/folders/1hrFcF9-HBaWBz8Zbdv31D4QvUldgyXEn?usp=sharing">Dataset</a>]
-	 </font></li><br>
-	  
-	<li><strong>Video-Enhanced Offline Reinforcement Learning: A Model-Based Approach</strong><br>
-	<font size="2">Minting Pan, Yitao Zheng, Jiajian Li, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    <span><b><font color='#BB2222'>ICML 2025</font></b></span>
-	    [<a target='_blank' href="https://openreview.net/pdf?id=uDTyhcOd9l">PDF</a>]
-	    [<a target='_blank' href="https://panmt.github.io/VeoRL.github.io/">Website</a>]
-	    [<a target='_blank' href="https://github.com/panmt/VeoRL">PyTorch Code</a>]
-		[<a target='_blank' href="https://drive.google.com/drive/folders/1EZhvU4YrZqkI7I4ZCWtsMqqJK_fWglyW?usp=sharing">Dataset</a>]
-	</font></li><br>
-	  
-    <li><strong>EvoMesh: Adaptive Physical Simulation with Hierarchical Graph Evolutions</strong><br>
-	<font size="2">Huayu Deng, Xiangming Zhu, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    <span><b><font color='#BB2222'>ICML 2025</font></b></span>
-	    [<a target='_blank' href="https://openreview.net/pdf?id=ZZvTc92dYQ">PDF</a>]
-	    [<a target='_blank' href="https://hbell99.github.io/evo-mesh/">Website</a>]
-	    [<a target='_blank' href="https://github.com/hbell99/EvoMesh">PyTorch Code</a>]
-	</font></li><br>
+ <div class="publication-filters">
+  <strong>Research Topics: </strong>
+  <a href="javascript:void(0);" class="filter-btn active" onclick="filterPublications('all')">Show All</a> /
+  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('world-models')">RL & World Models</a> /
+  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('3d-vision')">3D Vision</a> /
+  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('physics-time-series')">Physics-Informed ML & Time Series</a> /
+  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('others')">Others</a>
+</div>
 
-	<li><strong>Disentangled World Models: Learning to Transfer Semantic Knowledge from Distracting Videos for Reinforcement Learning</strong><br>
-	<font size="2">Qi Wang, Zhipeng Zhang, Baao Xie, Xin Jin, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings"></span></b>, Shiyu Wang, Liaomo Zheng, Xiaokang Yang, Wenjun Zeng<br>
-	    <span><b><font color='#BB2222'>ICCV 2025</font></b></span>
-	    [<a target='_blank' href="https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Disentangled_World_Models_Learning_to_Transfer_Semantic_Knowledge_from_Distracting_ICCV_2025_paper.pdf">PDF</a>]
-	    [<a target='_blank' href="https://qiwang067.github.io/diswm">Website</a>]
-	    [<a target='_blank' href="https://github.com/qiwang067/DisWM">PyTorch Code</a>]
-	</font></li><br>
-	  
-    <li><strong>Continual Visual Reinforcement Learning with A Life-Long World Model</strong><br>
-	<font size="2">Minting Pan, Wendong Zhang, Geng Chen, Xiangming Zhu, Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>ECML 2025</font></b></span>
-	[<a target='_blank' href="https://arxiv.org/pdf/2303.06572.pdf">PDF</a>]
-	[<a target='_blank' href="https://github.com/WendongZh/continual_visual_control">PyTorch Code</a>]
-	</font></li><br>
-	
-    <li><strong>Dynamic Scene Understanding through Object-Centric Voxelization and Neural Rendering</strong><br>
-	<font size="2">Yanpeng Zhao, Yiwei Hao, Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>TPAMI 2025</font></b></span>
-	    [<a target='_blank' href="https://arxiv.org/pdf/2407.20908">PDF</a>]
-	    [<a target='_blank' href="https://zyp123494.github.io/DynaVol-S.github.io/">Website</a>]
-	    [<a target='_blank' href="https://github.com/zyp123494/DynaVol">PyTorch Code</a>]
-		[<a target='_blank' href="https://drive.google.com/drive/folders/1rADezOEG3WwMidwQkWQBdGTGiW2Y1Q2K?usp=sharing">Dataset</a>]
-	 </font></li><br>
-	  
-    <li><strong>Open-World Reinforcement Learning over Long Short-Term Imagination</strong><br>
-	<font size="2">Jiajian Li*, Qi Wang*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xin Jin, Yang Li, Wenjun Zeng, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>ICLR 2025 Oral (Top 1.8%)</font></b></span>
-	    [<a target='_blank' href="https://openreview.net/pdf?id=vzItLaEoDa">PDF</a>]
-	    [<a target='_blank' href="https://qiwang067.github.io/ls-imagine">Website</a>]
-	    [<a target='_blank' href="https://github.com/qiwang067/LS-Imagine">PyTorch Code</a>]
-	</font></li><br>
-	  
-    <li><strong>Making Offline RL Online: Collaborative World Models for Offline Visual Reinforcement Learning</strong><br>
-	<font size="2">Qi Wang*, Junming Yang*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xin Jin, Wenjun Zeng, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>NeurIPS 2024</font></b></span>
-	    [<a target='_blank' href="https://proceedings.neurips.cc/paper_files/paper/2024/file/b041cbfcc3f282a9b3c8eb9c16177529-Paper-Conference.pdf">PDF</a>]
-	    [<a target='_blank' href="https://qiwang067.github.io/coworld">Website</a>]
-	    [<a target='_blank' href="https://github.com/qiwang067/CoWorld">PyTorch Code</a>]
-		[<a target='_blank' href="https://drive.google.com/file/d/1XXXLyx8oX40EXl8GNVgU_PpoPJHolZGJ/view?usp=sharing">Dataset</a>]
-	</font></li><br>
-	  
-    <li><strong>Model-Based Reinforcement Learning with Multi-Task Offline Pretraining</strong><br>
-	<font size="2">Minting Pan*, Yitao Zheng*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>ECML 2024</font></b></span>
-	    [<a target='_blank' href="https://arxiv.org/pdf/2306.03360">PDF</a>]
-	    [<a target='_blank' href="https://github.com/panmt/Vid2Act">PyTorch Code</a>]
-        </font></li><br>
-	  
-    <li><strong>Latent Intuitive Physics: Learning to Transfer Hidden Physics from A 3D Video</strong><br>
-	<font size="2">Xiangming Zhu*, Huayu Deng*, Haochen Yuan*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>ICLR 2024</font></b></span>
-	    [<a target='_blank' href="https://openreview.net/pdf?id=WZu4gUGN13">PDF</a>]
-	    [<a target='_blank' href="https://sites.google.com/view/latent-intuitive-physics/">Website</a>]
-	    [<a target='_blank' href="https://github.com/xherdan76/LIP">PyTorch Code</a>]
-		[<a target='_blank' href="https://drive.google.com/drive/folders/1ndvRbREQ4ahoqaoh9BpnJQWFCh9TnGS0?usp=drive_link">Dataset</a>]
-        </font></li><br>
+  <ul class="pub-list">
+    <li class="pub-item" data-topic="3d-vision"><strong>EMGauss: Continuous Slice-to-3D Reconstruction via Dynamic Gaussian Modeling in Volume Electron Microscopy</strong><br>
+    Yumeng He, Zanwei Zhou, Yekun Zheng, Chen Liang, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>CVPR 2026</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/abs/2512.06684">PDF</a>]
+        [<a target='_blank' href="https://raynehe.github.io/EMGauss/">Project</a>]
+    </li>
+    
+    <li class="pub-item" data-topic="world-models"><strong>Goal-Driven Reward by Video Diffusion Models for Reinforcement Learning</strong><br>
+    Qi Wang, Mian Wu, Yuyang Zhang, Mingqi Yuan, Wenyao Zhang, Haoxiang You, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings"></span></b>, Xin Jin, Xiaokang Yang, Wenjun Zeng<br>
+        <span><b><font color='#BB2222'>CVPR 2026</font></b></span>
+    </li>
+      
+    <li class="pub-item" data-topic="world-models physics-time-series"><strong>MetaTrader: Learning to Generalize RL Trading Policies Beyond Offline Data</strong><br>
+    Haochen Yuan*, Minting Pan*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Siyu Gao, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>AAAI 2026</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/pdf/2505.12759">PDF</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="3d-vision"><strong>MetaGS: A Meta-Learned Gaussian-Phong Model for Out-of-Distribution 3D Scene Relighting</strong><br>
+    Yumeng He, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>NeurIPS 2025 Spotlight (Top 3.5%)</font></b></span>
+        [<a target='_blank' href="https://openreview.net/pdf/675dbaee7a026ed452592654e399e8d651729a04.pdf">PDF</a>]
+        [<a target='_blank' href="https://raynehe.github.io/MetaGS/">Project</a>]
+        [<a target='_blank' href="https://github.com/raynehe/MetaGS">Code</a>]
+        [<a target='_blank' href="https://drive.google.com/drive/folders/1hrFcF9-HBaWBz8Zbdv31D4QvUldgyXEn?usp=sharing">Dataset</a>]
+     </li>
+      
+    <li class="pub-item" data-topic="world-models"><strong>Video-Enhanced Offline Reinforcement Learning: A Model-Based Approach</strong><br>
+    Minting Pan, Yitao Zheng, Jiajian Li, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>ICML 2025</font></b></span>
+        [<a target='_blank' href="https://openreview.net/pdf?id=uDTyhcOd9l">PDF</a>]
+        [<a target='_blank' href="https://panmt.github.io/VeoRL.github.io/">Project</a>]
+        [<a target='_blank' href="https://github.com/panmt/VeoRL">Code</a>]
+        [<a target='_blank' href="https://drive.google.com/drive/folders/1EZhvU4YrZqkI7I4ZCWtsMqqJK_fWglyW?usp=sharing">Dataset</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="physics-time-series"><strong>EvoMesh: Adaptive Physical Simulation with Hierarchical Graph Evolutions</strong><br>
+    Huayu Deng, Xiangming Zhu, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>ICML 2025</font></b></span>
+        [<a target='_blank' href="https://openreview.net/pdf?id=ZZvTc92dYQ">PDF</a>]
+        [<a target='_blank' href="https://hbell99.github.io/evo-mesh/">Project</a>]
+        [<a target='_blank' href="https://github.com/hbell99/EvoMesh">Code</a>]
+    </li>
 
-    <li><strong>DynaVol: Unsupervised Learning for Dynamic Scenes through Object-Centric Voxelization</strong><br>
-	<font size="2">Yanpeng Zhao*, Siyu Gao*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>ICLR 2024</font></b></span>
-	    [<a target='_blank' href="https://openreview.net/pdf?id=koYsgfEwCQ">PDF</a>]
-		[<a target='_blank' href="https://sites.google.com/view/dynavol/">Website</a>]
-		[<a target='_blank' href="https://github.com/zyp123494/DynaVol">PyTorch Code</a>]
-		[<a target='_blank' href="https://drive.google.com/drive/folders/1rADezOEG3WwMidwQkWQBdGTGiW2Y1Q2K?usp=sharing">Dataset</a>]
-    	</font></li><br>    
-	  
-    <li><strong>Model-Based Reinforcement Learning with Isolated Imaginations</strong><br>
-	<font size="2">Minting Pan, Xiangming Zhu, Yitao Zheng, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    <span><b><font color='#BB2222'>TPAMI 2023</font></b></span>
-	    [<a target='_blank' href="https://arxiv.org/pdf/2303.14889.pdf">PDF</a>]
-	    [<a target='_blank' href="https://github.com/panmt/MBRL_with_Isolated_Imaginations">PyTorch Code</a>]
-    	</font></li><br>
-	  
-    <li><strong>ModeRNN: Harnessing Spatiotemporal Mode Collapse in Unsupervised Predictive Learning</strong><br>
-	<font size="2">Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Haixu Wu, Jianmin Wang, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
-	<span><b><font color='#BB2222'>TPAMI 2023</font></b></span>
-	    [<a target='_blank' href="https://ieeexplore.ieee.org/document/10177760">PDF</a>]
-	[<a target='_blank' href="https://github.com/thuml/ModeRNN">PyTorch Code</a>]
-    	</font></li><br>
+    <li class="pub-item" data-topic="world-models"><strong>Disentangled World Models: Learning to Transfer Semantic Knowledge from Distracting Videos for Reinforcement Learning</strong><br>
+    Qi Wang, Zhipeng Zhang, Baao Xie, Xin Jin, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings"></span></b>, Shiyu Wang, Liaomo Zheng, Xiaokang Yang, Wenjun Zeng<br>
+        <span><b><font color='#BB2222'>ICCV 2025</font></b></span>
+        [<a target='_blank' href="https://openaccess.thecvf.com/content/ICCV2025/papers/Wang_Disentangled_World_Models_Learning_to_Transfer_Semantic_Knowledge_from_Distracting_ICCV_2025_paper.pdf">PDF</a>]
+        [<a target='_blank' href="https://qiwang067.github.io/diswm">Project</a>]
+        [<a target='_blank' href="https://github.com/qiwang067/DisWM">Code</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="world-models"><strong>Continual Visual Reinforcement Learning with A Life-Long World Model</strong><br>
+    Minting Pan, Wendong Zhang, Geng Chen, Xiangming Zhu, Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>ECML 2025</font></b></span>
+    [<a target='_blank' href="https://arxiv.org/pdf/2303.06572.pdf">PDF</a>]
+    [<a target='_blank' href="https://github.com/WendongZh/continual_visual_control">Code</a>]
+    </li>
+    
+    <li class="pub-item" data-topic="3d-vision"><strong>Dynamic Scene Understanding through Object-Centric Voxelization and Neural Rendering</strong><br>
+    Yanpeng Zhao, Yiwei Hao, Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>TPAMI 2025</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/pdf/2407.20908">PDF</a>]
+        [<a target='_blank' href="https://zyp123494.github.io/DynaVol-S.github.io/">Project</a>]
+        [<a target='_blank' href="https://github.com/zyp123494/DynaVol">Code</a>]
+        [<a target='_blank' href="https://drive.google.com/drive/folders/1rADezOEG3WwMidwQkWQBdGTGiW2Y1Q2K?usp=sharing">Dataset</a>]
+     </li>
+      
+    <li class="pub-item" data-topic="world-models"><strong>Open-World Reinforcement Learning over Long Short-Term Imagination</strong><br>
+    Jiajian Li*, Qi Wang*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xin Jin, Yang Li, Wenjun Zeng, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>ICLR 2025 Oral (Top 1.8%)</font></b></span>
+        [<a target='_blank' href="https://openreview.net/pdf?id=vzItLaEoDa">PDF</a>]
+        [<a target='_blank' href="https://qiwang067.github.io/ls-imagine">Project</a>]
+        [<a target='_blank' href="https://github.com/qiwang067/LS-Imagine">Code</a>]
+    </li>
 
-    <li><strong>Improving Masked Autoencoders by Learning Where to Mask</strong><br>
-	<font size="2">Haijian Chen*, Wendong Zhang*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<span style="font-family:Wingdings">*</span><br>
-	<span><b><font color='#BB2222'>PRCV 2023 (Best Student Paper Award Nomination)</font></b></span>
-	    [<a target='_blank' href="https://arxiv.org/pdf/2303.06583.pdf">PDF</a>]
-	[<a target='_blank' href="https://github.com/hyperea/automae">PyTorch Code</a>]
-    	</font></li><br>
-	  
-    <li><strong>Fully Context-Aware Image Inpainting with a Learned Semantic Pyramid</strong><br> 
-	<font size="2">Wendong Zhang, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Bingbing Ni, Xiaokang Yang<br>
-    	<span><b><font color='#BB2222'>Pattern Recognition 2023</font></b></span>
+    <li class="pub-item" data-topic="3d-vision world-models"><strong>NeoWorld: Neural Simulation of Explorable Virtual Worlds via Progressive 3D Unfolding</strong><br>
+    Yanpeng Zhao, Shanyan Guan, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Yanhao Ge, Wei Li, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>arXiv</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/pdf/2509.24441">PDF</a>]
+        [<a target='_blank' href="https://zyp123494.github.io/NeoWorld.github.io/">Project</a>]
+    </li>
+
+    <li class="pub-item" data-topic="physics-time-series"><strong>DimOL: Dimensional Awareness as A New 'Dimension' in Operator Learning</strong><br>
+    Yichen Song, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>arXiv</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/abs/2410.05894">PDF</a>]
+        [<a target='_blank' href="https://github.com/Eachen-Soong/DimOL">Code</a>]
+    </li>
+    
+    <li class="pub-item" data-topic="physics-time-series world-models"><strong>ReAugment: Model Zoo-Guided RL for Few-Shot Time Series Augmentation and Forecasting</strong><br>
+    Haochen Yuan, Yutong Wang, Yihong Chen, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>arXiv</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/abs/2409.06282">PDF</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="world-models"><strong>Making Offline RL Online: Collaborative World Models for Offline Visual Reinforcement Learning</strong><br>
+    Qi Wang*, Junming Yang*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xin Jin, Wenjun Zeng, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>NeurIPS 2024</font></b></span>
+        [<a target='_blank' href="https://proceedings.neurips.cc/paper_files/paper/2024/file/b041cbfcc3f282a9b3c8eb9c16177529-Paper-Conference.pdf">PDF</a>]
+        [<a target='_blank' href="https://qiwang067.github.io/coworld">Project</a>]
+        [<a target='_blank' href="https://github.com/qiwang067/CoWorld">Code</a>]
+        [<a target='_blank' href="https://drive.google.com/file/d/1XXXLyx8oX40EXl8GNVgU_PpoPJHolZGJ/view?usp=sharing">Dataset</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="world-models"><strong>Model-Based Reinforcement Learning with Multi-Task Offline Pretraining</strong><br>
+    Minting Pan*, Yitao Zheng*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>ECML 2024</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/pdf/2306.03360">PDF</a>]
+        [<a target='_blank' href="https://github.com/panmt/Vid2Act">Code</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="physics-time-series"><strong>Latent Intuitive Physics: Learning to Transfer Hidden Physics from A 3D Video</strong><br>
+    Xiangming Zhu*, Huayu Deng*, Haochen Yuan*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>ICLR 2024</font></b></span>
+        [<a target='_blank' href="https://openreview.net/pdf?id=WZu4gUGN13">PDF</a>]
+        [<a target='_blank' href="https://sites.google.com/view/latent-intuitive-physics/">Project</a>]
+        [<a target='_blank' href="https://github.com/xherdan76/LIP">Code</a>]
+        [<a target='_blank' href="https://drive.google.com/drive/folders/1ndvRbREQ4ahoqaoh9BpnJQWFCh9TnGS0?usp=drive_link">Dataset</a>]
+    </li>
+
+    <li class="pub-item" data-topic="3d-vision"><strong>DynaVol: Unsupervised Learning for Dynamic Scenes through Object-Centric Voxelization</strong><br>
+    Yanpeng Zhao*, Siyu Gao*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>ICLR 2024</font></b></span>
+        [<a target='_blank' href="https://openreview.net/pdf?id=koYsgfEwCQ">PDF</a>]
+        [<a target='_blank' href="https://sites.google.com/view/dynavol/">Project</a>]
+        [<a target='_blank' href="https://github.com/zyp123494/DynaVol">Code</a>]
+        [<a target='_blank' href="https://drive.google.com/drive/folders/1rADezOEG3WwMidwQkWQBdGTGiW2Y1Q2K?usp=sharing">Dataset</a>]
+    </li> 
+      
+    <li class="pub-item" data-topic="world-models"><strong>Model-Based Reinforcement Learning with Isolated Imaginations</strong><br>
+    Minting Pan, Xiangming Zhu, Yitao Zheng, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>TPAMI 2023</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/pdf/2303.14889.pdf">PDF</a>]
+        [<a target='_blank' href="https://github.com/panmt/MBRL_with_Isolated_Imaginations">Code</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="physics-time-series"><strong>ModeRNN: Harnessing Spatiotemporal Mode Collapse in Unsupervised Predictive Learning</strong><br>
+    Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Haixu Wu, Jianmin Wang, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
+    <span><b><font color='#BB2222'>TPAMI 2023</font></b></span>
+        [<a target='_blank' href="https://ieeexplore.ieee.org/document/10177760">PDF</a>]
+    [<a target='_blank' href="https://github.com/thuml/ModeRNN">Code</a>]
+    </li>
+
+    <li class="pub-item" data-topic="world-models"><strong>Improving Masked Autoencoders by Learning Where to Mask</strong><br>
+    Haijian Chen*, Wendong Zhang*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<span style="font-family:Wingdings">*</span><br>
+    <span><b><font color='#BB2222'>PRCV 2023 (Best Student Paper Award Nomination)</font></b></span>
+        [<a target='_blank' href="https://arxiv.org/pdf/2303.06583.pdf">PDF</a>]
+    [<a target='_blank' href="https://github.com/hyperea/automae">Code</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="others"><strong>Fully Context-Aware Image Inpainting with a Learned Semantic Pyramid</strong><br> 
+    Wendong Zhang, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Bingbing Ni, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>Pattern Recognition 2023</font></b></span>
         [<a target='_blank' href='https://arxiv.org/pdf/2112.04107.pdf'>PDF</a>]
-	[<a target='_blank' href='https://github.com/wendongzh/spn'>PyTorch Code</a>]
-   	</font></li><br>
+    [<a target='_blank' href='https://github.com/wendongzh/spn'>Code</a>]
+    </li>
 
-    <li><strong>StockFormer: Learning Hybrid Trading Machines with Predictive Coding</strong><br>
-	<font size="2">Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    <span><b><font color='#BB2222'>IJCAI 2023</font></b></span>
-	[<a target='_blank' href="https://www.ijcai.org/proceedings/2023/0530.pdf">PDF</a>]
-	[<a target='_blank' href="https://github.com/gsyyysg/StockFormer">PyTorch Code</a>]
-    	</font></li><br>
-	  
-    <li><strong>Iso-Dream: Isolating and Leveraging Noncontrollable Visual Dynamics in World Models</strong><br>
-	<font size="2">Minting Pan*, Xiangming Zhu*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    <span><b><font color='#BB2222'>NeurIPS 2022 Spotlight</font></b></span>
-	[<a target='_blank' href="https://arxiv.org/pdf/2205.13817.pdf">PDF</a>]
-	[<a target='_blank' href="https://sites.google.com/view/iso-dream">Website</a>]
-	[<a target='_blank' href="https://github.com/panmt/Iso-Dream">PyTorch Code</a>]
-    	</font></li><br>
-	  
-    <li><strong>Out-of-Domain Human Mesh Reconstruction via Dynamic Bilevel Online Adaptation</strong><br>
-    	<font size="2">Shanyan Guan, Jingwei Xu, Michelle Z. He, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Bingbing Ni, Xiaokang Yang<br>
-    		<span><b><font color='#BB2222'>TPAMI 2022</font></b></span>
-		[<a target='_blank' href="https://drive.google.com/file/d/1b6e3rMrVn_xNhM-MitqpLtulARdl4M9F/view">PDF</a>]
-		[<a target='_blank' href="https://sites.google.com/view/dynaboa">Website</a>]
-		[<a target='_blank' href='https://github.com/syguan96/DynaBOA'>PyTorch Code</a>]
-    	</font></li><br>
+    <li class="pub-item" data-topic="world-models physics-time-series"><strong>StockFormer: Learning Hybrid Trading Machines with Predictive Coding</strong><br>
+    Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>IJCAI 2023</font></b></span>
+    [<a target='_blank' href="https://www.ijcai.org/proceedings/2023/0530.pdf">PDF</a>]
+    [<a target='_blank' href="https://github.com/gsyyysg/StockFormer">Code</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="world-models"><strong>Iso-Dream: Isolating and Leveraging Noncontrollable Visual Dynamics in World Models</strong><br>
+    Minting Pan*, Xiangming Zhu*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>NeurIPS 2022 Spotlight</font></b></span>
+    [<a target='_blank' href="https://arxiv.org/pdf/2205.13817.pdf">PDF</a>]
+    [<a target='_blank' href="https://sites.google.com/view/iso-dream">Project</a>]
+    [<a target='_blank' href="https://github.com/panmt/Iso-Dream">Code</a>]
+    </li>
+      
+    <li class="pub-item" data-topic="3d-vision"><strong>Out-of-Domain Human Mesh Reconstruction via Dynamic Bilevel Online Adaptation</strong><br>
+        Shanyan Guan, Jingwei Xu, Michelle Z. He, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Bingbing Ni, Xiaokang Yang<br>
+            <span><b><font color='#BB2222'>TPAMI 2022</font></b></span>
+        [<a target='_blank' href="https://drive.google.com/file/d/1b6e3rMrVn_xNhM-MitqpLtulARdl4M9F/view">PDF</a>]
+        [<a target='_blank' href="https://sites.google.com/view/dynaboa">Project</a>]
+        [<a target='_blank' href='https://github.com/syguan96/DynaBOA'>Code</a>]
+    </li>
 
-    <li><strong>NeuroFluid: Fluid Dynamics Grounding with Particle-Driven Neural Radiance Fields</strong><br>
-	<font size="2">Shanyan Guan, Huayu Deng, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	<span><b><font color='#BB2222'>ICML 2022 Spotlight</font></b></span>
-	[<a target='_blank' href="https://arxiv.org/abs/2203.01762">PDF</a>]
-	[<a target='_blank' href="https://icml.cc/media/icml-2022/Slides/18385.pdf">Slides</a>]
-	[<a target='_blank' href="https://syguan96.github.io/NeuroFluid/">Website</a>]
-	[<a target='_blank' href="https://github.com/syguan96/NeuroFluid">PyTorch Code</a>]
-		[<a target='_blank' href="https://drive.google.com/drive/folders/14lOFgqE2XMhFrJUj94IQoIVa2q1R0v2C?usp=sharing">Dataset</a>]
-   	</font></li><br>
+    <li class="pub-item" data-topic="physics-time-series 3d-vision"><strong>NeuroFluid: Fluid Dynamics Grounding with Particle-Driven Neural Radiance Fields</strong><br>
+    Shanyan Guan, Huayu Deng, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
+    <span><b><font color='#BB2222'>ICML 2022 Spotlight</font></b></span>
+    [<a target='_blank' href="https://arxiv.org/abs/2203.01762">PDF</a>]
+    [<a target='_blank' href="https://icml.cc/media/icml-2022/Slides/18385.pdf">Slides</a>]
+    [<a target='_blank' href="https://syguan96.github.io/NeuroFluid/">Project</a>]
+    [<a target='_blank' href="https://github.com/syguan96/NeuroFluid">Code</a>]
+        [<a target='_blank' href="https://drive.google.com/drive/folders/14lOFgqE2XMhFrJUj94IQoIVa2q1R0v2C?usp=sharing">Dataset</a>]
+    </li>
 
-    <li><strong>Continual Predictive Learning from Videos</strong><br>
-    	<font size="2">Geng Chen*, Wendong Zhang*, Han Lu, Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Mingsheng Long, Xiaokang Yang<br>
-    	<span><b><font color='#BB2222'>CVPR 2022 Oral</font></b></span>
-	[<a target='_blank' href="https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Continual_Predictive_Learning_From_Videos_CVPR_2022_paper.pdf">PDF</a>]
-	[<a target='_blank' href="https://jc043.github.io/CPL">Website</a>]
-	[<a target='_blank' href="https://github.com/jc043/CPL">PyTorch Code</a>]
-    	</font></li><br>
+    <li class="pub-item" data-topic="physics-time-series world-models"><strong>Continual Predictive Learning from Videos</strong><br>
+        Geng Chen*, Wendong Zhang*, Han Lu, Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Mingsheng Long, Xiaokang Yang<br>
+        <span><b><font color='#BB2222'>CVPR 2022 Oral</font></b></span>
+    [<a target='_blank' href="https://openaccess.thecvf.com/content/CVPR2022/papers/Chen_Continual_Predictive_Learning_From_Videos_CVPR_2022_paper.pdf">PDF</a>]
+    [<a target='_blank' href="https://jc043.github.io/CPL">Project</a>]
+    [<a target='_blank' href="https://github.com/jc043/CPL">Code</a>]
+    </li>
 
-    <li><strong>PredRNN: A Recurrent Neural Network for Spatiotemporal Predictive Learning</strong><br>
-    <font size="2"><strong>Yunbo Wang*</strong>, Haixu Wu*, Jianjin Zhang, Zhifeng Gao, Jianmin Wang, Philip S. Yu, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
+    <li class="pub-item" data-topic="physics-time-series"><strong>PredRNN: A Recurrent Neural Network for Spatiotemporal Predictive Learning</strong><br>
+    <strong>Yunbo Wang*</strong>, Haixu Wu*, Jianjin Zhang, Zhifeng Gao, Jianmin Wang, Philip S. Yu, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
     <span><b><font color='#BB2222'>TPAMI 2022 (ESI - Top 1% highly cited)</font></b></span>
     [<a target='_blank' href="https://arxiv.org/pdf/2103.09504.pdf">PDF</a>]
-    [<a target='_blank' href='https://github.com/thuml/predrnn-pytorch'>PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/thuml/predrnn-pytorch'>Code</a>]
+    </li>
 
-    <li><strong>Learning Transferable Features for Point Cloud Detection via 3D Contrastive Co-training</strong><br>
-    <font size="2">Yihan Zeng*, Chunwei Wang*, <strong>Yunbo Wang</strong>, Hang Xu, Chaoqiang Ye, Zhen Yang, Chao Ma<br>
+    <li class="pub-item" data-topic="3d-vision"><strong>Learning Transferable Features for Point Cloud Detection via 3D Contrastive Co-training</strong><br>
+    Yihan Zeng*, Chunwei Wang*, <strong>Yunbo Wang</strong>, Hang Xu, Chaoqiang Ye, Zhen Yang, Chao Ma<br>
     <span><b><font color='#BB2222'>NeurIPS 2021</font></b></span>
     [<a target='_blank' href="https://vision.sjtu.edu.cn/files/nips2021_3DCoCo.pdf">PDF</a>]
     [<a target='_blank' href="https://vision.sjtu.edu.cn/files/nips2021_3DCoCo_supp.pdf">Supplement</a>]
-    </font></li><br>
+    </li>
 
-    <li><strong>VideoDG: Generalizing Temporal Relations in Videos to Novel Domains</strong><br>
-    <font size="2">Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Jianmin Wang, Philip S. Yu, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
+    <li class="pub-item" data-topic="others"><strong>VideoDG: Generalizing Temporal Relations in Videos to Novel Domains</strong><br>
+    Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Jianmin Wang, Philip S. Yu, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
     <span><b><font color='#BB2222'>TPAMI 2021</font></b></span>
     [<a target='_blank' href="https://ieeexplore.ieee.org/document/9556560">PDF</a>]
-    [<a target='_blank' href="https://github.com/thuml/VideoDG">PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href="https://github.com/thuml/VideoDG">Code</a>]
+    </li>
   
-    <li><strong>Context-Aware Image Inpainting with Learned Semantic Priors</strong><br> 
-    <font size="2">Wendong Zhang, Junwei Zhu, Ying Tai, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Wenqing Chu, Bingbing Ni, Chengjie Wang, Xiaokang Yang<br>
+    <li class="pub-item" data-topic="others"><strong>Context-Aware Image Inpainting with Learned Semantic Priors</strong><br> 
+    Wendong Zhang, Junwei Zhu, Ying Tai, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Wenqing Chu, Bingbing Ni, Chengjie Wang, Xiaokang Yang<br>
     <span><b><font color='#BB2222'>IJCAI 2021</font></b></span>
     [<a target='_blank' href='https://arxiv.org/pdf/2106.07220.pdf'>PDF</a>]
-	[<a target='_blank' href='https://github.com/WendongZh/SPL'>PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/WendongZh/SPL'>Code</a>]
+    </li>
 
-    <li><strong>Bilevel Online Adaptation for Out-of-Domain Human Mesh Reconstruction</strong><br> 
-    <font size="2">Shanyan Guan*, Jingwei Xu*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Bingbing Ni, Xiaokang Yang<br>
+    <li class="pub-item" data-topic="3d-vision"><strong>Bilevel Online Adaptation for Out-of-Domain Human Mesh Reconstruction</strong><br> 
+    Shanyan Guan*, Jingwei Xu*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Bingbing Ni, Xiaokang Yang<br>
     <span><b><font color='#BB2222'>CVPR 2021</font></b></span>
     [<a target='_blank' href='https://arxiv.org/pdf/2103.16449.pdf'>PDF</a>]
-    [<a target='_blank' href='https://sites.google.com/view/dynaboa/boa-cvpr-2021'>Website</a>]
-    [<a target='_blank' href='https://github.com/syguan96/BOA'>PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://sites.google.com/view/dynaboa/boa-cvpr-2021'>Project</a>]
+    [<a target='_blank' href='https://github.com/syguan96/BOA'>Code</a>]
+    </li>
 
-    <li><strong>MetaSets: Meta-Learning on Point Sets for Generalizable Representations</strong><br> 
-    <font size="2">Chao Huang*, Zhangjie Cao*, <strong>Yunbo Wang*</strong>, Jianmin Wang, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
+    <li class="pub-item" data-topic="3d-vision"><strong>MetaSets: Meta-Learning on Point Sets for Generalizable Representations</strong><br> 
+    Chao Huang*, Zhangjie Cao*, <strong>Yunbo Wang*</strong>, Jianmin Wang, Mingsheng Long<span style="font-family:Wingdings">*</span><br>
     <span><b><font color='#BB2222'>CVPR 2021</font></b></span>
     [<a target='_blank' href='http://ise.thss.tsinghua.edu.cn/~mlong/doc/MetaSets-cvpr21.pdf'>PDF</a>]
-    [<a target='_blank' href='https://github.com/thuml/Metasets'>PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/thuml/Metasets'>Code</a>]
+    </li>
 
-    <li><strong>Deep Predictive Learning: Problems and Methods</strong><br>
-    <font size="2">PhD Dissertation (in Chinese) [<a target='_blank' href='https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=147994'>PDF</a>]<br>
+    <li class="pub-item" data-topic="others"><strong>Deep Predictive Learning: Problems and Methods</strong><br>
+    PhD Dissertation (in Chinese) [<a target='_blank' href='https://www.ccf.org.cn/ccf/contentcore/resource/download?ID=147994'>PDF</a>]<br>
     <span><b><font color='#BB2222'>Outstanding Doctoral Dissertation Award, China Computer Federation (CCF), 2020</font></b></span>
-    </font></li><br>
-	
-    <li><strong>Unsupervised Transfer Learning for Spatiotemporal Predictive Networks</strong><br> 
-    <font size="2">Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang<br>
+    </li>
+    
+    <li class="pub-item" data-topic="physics-time-series"><strong>Unsupervised Transfer Learning for Spatiotemporal Predictive Networks</strong><br> 
+    Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang<br>
     <span><b><font color='#BB2222'>ICML 2020</font></b></span>
     [<a target='_blank' href='http://proceedings.mlr.press/v119/yao20a/yao20a.pdf'>PDF</a>]
-    [<a target='_blank' href='https://github.com/thuml/transferable-memory'>PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/thuml/transferable-memory'>Code</a>]
+    </li>
 
-    <li><strong>DualSMC: Tunneling Differentiable Filtering and Planning under Continuous POMDPs</strong><br> 
-    <font size="2"><strong>Yunbo Wang*</strong>, Bo Liu*, Jiajun Wu, Yuke Zhu, Simon S. Du, Li Fei-Fei, Joshua B. Tenenbaum<br>
+    <li class="pub-item" data-topic="world-models"><strong>DualSMC: Tunneling Differentiable Filtering and Planning under Continuous POMDPs</strong><br> 
+    <strong>Yunbo Wang*</strong>, Bo Liu*, Jiajun Wu, Yuke Zhu, Simon S. Du, Li Fei-Fei, Joshua B. Tenenbaum<br>
     <span><b><font color='#BB2222'>IJCAI 2020</font></b></span>
     [<a target='_blank' href='https://www.ijcai.org/Proceedings/2020/0579.pdf'>PDF</a>]
-    [<a target='_blank' href='http://people.csail.mit.edu/yunbo/dualsmc/'>Website</a>]
-    [<a target='_blank' href='https://github.com/Cranial-XIX/DualSMC'>PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='http://people.csail.mit.edu/yunbo/dualsmc/'>Project</a>]
+    [<a target='_blank' href='https://github.com/Cranial-XIX/DualSMC'>Code</a>]
+    </li>
 
-    <li><strong>Probabilistic Video Prediction from Noisy Data with a Posterior Confidence</strong><br> 
-    <font size="2"><strong>Yunbo Wang</strong>, Jiajun Wu, Mingsheng Long, Joshua B. Tenenbaum<br>
+    <li class="pub-item" data-topic="physics-time-series"><strong>Probabilistic Video Prediction from Noisy Data with a Posterior Confidence</strong><br> 
+    <strong>Yunbo Wang</strong>, Jiajun Wu, Mingsheng Long, Joshua B. Tenenbaum<br>
     <span><b><font color='#BB2222'>CVPR 2020</font></b></span>
     [<a target='_blank' href='http://people.csail.mit.edu/yunbo/bpnet/papers/bpnet.pdf'>PDF</a>]
-    [<a target='_blank' href='http://people.csail.mit.edu/yunbo/bpnet/'>Website</a>]
-    </font></li><br>
+    [<a target='_blank' href='http://people.csail.mit.edu/yunbo/bpnet/'>Project</a>]
+    </li>
 
-    <li><strong>Progressive Adversarial Networks for Fine-Grained Domain Adaptation</strong><br> 
-    <font size="2">Sinan Wang, Xinyang Chen, <strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang<br>
+    <li class="pub-item" data-topic="others"><strong>Progressive Adversarial Networks for Fine-Grained Domain Adaptation</strong><br> 
+    Sinan Wang, Xinyang Chen, <strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang<br>
     <span><b><font color='#BB2222'>CVPR 2020</font></b></span>
     [<a target='_blank' href='https://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Progressive_Adversarial_Networks_for_Fine-Grained_Domain_Adaptation_CVPR_2020_paper.pdf'>PDF</a>]
-    </font></li><br>
+    </li>
 
-    <li><strong>A Multi-Player Minimax Game for Diversifying Multi-Discriminators of Generative Adversarial Networks</strong><br> 
-    <font size="2">Ying Jin, <strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu, Jiaguang Sun<br>
+    <li class="pub-item" data-topic="others"><strong>A Multi-Player Minimax Game for Diversifying Multi-Discriminators of Generative Adversarial Networks</strong><br> 
+    Ying Jin, <strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu, Jiaguang Sun<br>
     <span><b><font color='#BB2222'>ICME 2020</font></b></span>
     [<a target='_blank' href='http://ise.thss.tsinghua.edu.cn/~mlong/doc/multiplayer-gan-icme20.pdf'>PDF</a>]
-    </font></li><br>
+    </li>
 
-    <li><strong>Multi-Task Learning of Generalizable Representations for Video Action Recognition</strong><br> 
-    <font size="2">Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu, Jiaguang Sun<br>
+    <li class="pub-item" data-topic="others"><strong>Multi-Task Learning of Generalizable Representations for Video Action Recognition</strong><br> 
+    Zhiyu Yao*, <strong>Yunbo Wang*</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu, Jiaguang Sun<br>
     <span><b><font color='#BB2222'>ICME 2020</font></b></span>
     [<a target='_blank' href='http://ise.thss.tsinghua.edu.cn/~mlong/doc/reversed-two-stream-networks-icme20.pdf'>PDF</a>]
-    </font></li><br>
+    </li>
 
-    <li><strong>Memory In Memory: A Predictive Neural Network for Learning Higher-Order Non-Stationarity from Spatiotemporal Dynamics</strong><br> 
-    <font size="2"><strong>Yunbo Wang*</strong>, Jianjin Zhang*, Hongyu Zhu, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu<br>
+    <li class="pub-item" data-topic="physics-time-series"><strong>Memory In Memory: A Predictive Neural Network for Learning Higher-Order Non-Stationarity from Spatiotemporal Dynamics</strong><br> 
+    <strong>Yunbo Wang*</strong>, Jianjin Zhang*, Hongyu Zhu, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu<br>
     <span><b><font color='#BB2222'>CVPR 2019</font></b></span>
     [<a target='_blank' href='https://arxiv.org/pdf/1811.07490.pdf'>PDF</a>]
-    [<a target='_blank' href='https://github.com/Yunbo426/MIM'>TensorFlow Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/Yunbo426/MIM'>Code</a>]
+    </li>
 
-    <li><strong>Eidetic 3D LSTM: A Model for Video Prediction and Beyond</strong><br>
-    <font size="2"><strong>Yunbo Wang</strong>, Lu Jiang, Ming-Hsuan Yang, Li-Jia Li, Mingsheng Long, Li Fei-Fei<br>
+    <li class="pub-item" data-topic="physics-time-series"><strong>Eidetic 3D LSTM: A Model for Video Prediction and Beyond</strong><br>
+    <strong>Yunbo Wang</strong>, Lu Jiang, Ming-Hsuan Yang, Li-Jia Li, Mingsheng Long, Li Fei-Fei<br>
     <span><b><font color='#BB2222'>ICLR 2019</font></b></span>
     [<a target='_blank' href='https://openreview.net/pdf?id=B1lKS2AqtX'>PDF</a>]
     [<a target='_blank' href='https://s3.amazonaws.com/postersession.ai/f88115d2-ac6d-466e-a4e7-ba27e01ae9f4.pdf'>Poster</a>]
-    [<a target='_blank' href='https://github.com/google/e3d_lstm'>TensorFlow Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/google/e3d_lstm'>Code</a>]
+    </li>
 
-    <li><strong>PredRNN++: Towards A Resolution of the Deep-in-Time Dilemma in Spatiotemporal Predictive Learning</strong><br>
-    <font size="2"><strong>Yunbo Wang</strong>, Zhifeng Gao, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu<br>
+    <li class="pub-item" data-topic="physics-time-series"><strong>PredRNN++: Towards A Resolution of the Deep-in-Time Dilemma in Spatiotemporal Predictive Learning</strong><br>
+    <strong>Yunbo Wang</strong>, Zhifeng Gao, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu<br>
     <span><b><font color='#BB2222'>ICML 2018</font></b></span>
     [<a target='_blank' href='http://proceedings.mlr.press/v80/wang18b.html'>PDF</a>]
-    [<a target='_blank' href='https://github.com/Yunbo426/predrnn-pp'>TensorFlow Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/Yunbo426/predrnn-pp'>Code</a>]
+    </li>
 
-    <li><strong>PredCNN: Predictive Learning with Cascade Convolutions</strong><br>
-    <font size="2">Ziru Xu*, <strong>Yunbo Wang*</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang<br>
+    <li class="pub-item" data-topic="physics-time-series"><strong>PredCNN: Predictive Learning with Cascade Convolutions</strong><br>
+    Ziru Xu*, <strong>Yunbo Wang*</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang<br>
     <span><b><font color='#BB2222'>IJCAI 2018</font></b></span>
     [<a target='_blank' href='https://www.ijcai.org/proceedings/2018/0408.pdf'>PDF</a>]
-    </font></li><br>
+    </li>
 
-    <li><strong>PredRNN: Recurrent Neural Networks for Predictive Learning Using Spatiotemporal LSTMs</strong><br>
-    <font size="2"><strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Zhifeng Gao, Philip S. Yu<br>
+    <li class="pub-item" data-topic="physics-time-series"><strong>PredRNN: Recurrent Neural Networks for Predictive Learning Using Spatiotemporal LSTMs</strong><br>
+    <strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Zhifeng Gao, Philip S. Yu<br>
     <span><b><font color='#BB2222'>NeurIPS 2017</font></b></span>
     [<a target='_blank' href='https://papers.nips.cc/paper/6689-predrnn-recurrent-neural-networks-for-predictive-learning-using-spatiotemporal-lstms.pdf'>PDF</a>]
-    [<a target='_blank' href='https://github.com/thuml/predrnn-pytorch'>PyTorch Code</a>]
-    </font></li><br>
+    [<a target='_blank' href='https://github.com/thuml/predrnn-pytorch'>Code</a>]
+    </li>
 
-    <li><strong>Spatiotemporal Pyramid Network for Video Action Recognition</strong><br> 
-    <font size="2"><strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu<br>
+    <li class="pub-item" data-topic="others"><strong>Spatiotemporal Pyramid Network for Video Action Recognition</strong><br> 
+    <strong>Yunbo Wang</strong>, Mingsheng Long<span style="font-family:Wingdings">*</span>, Jianmin Wang, Philip S. Yu<br>
     <span><b><font color='#BB2222'>CVPR 2017</font></b></span>
     [<a target='_blank' href='https://arxiv.org/pdf/1903.01038.pdf'>PDF</a>]
-    </font></li><br>
+    </li>
 
-    <li><strong>A Feasibility Study of Ray Tracing on Mobile GPUs</strong><br> 
-    <font size="2"><strong>Yunbo Wang</strong>, Chunfeng Liu, Yangdong Deng<span style="font-family:Wingdings">*</span><br>
+    <li class="pub-item" data-topic="others"><strong>A Feasibility Study of Ray Tracing on Mobile GPUs</strong><br> 
+    <strong>Yunbo Wang</strong>, Chunfeng Liu, Yangdong Deng<span style="font-family:Wingdings">*</span><br>
     <span><b><font color='#BB2222'>SIGGRAPH Asia 2014</font></b></span>
     [<a target='_blank' href='https://dl.acm.org/citation.cfm?id=2669071&dl=ACM&coll=DL'>PDF</a>]
-    </font></li>
-  </ol>
-
-<h2>Preprints</h2>
- <ol>
-    <li><strong>NeoWorld: Neural Simulation of Explorable Virtual Worlds via Progressive 3D Unfolding</strong><br>
-	<font size="2">Yanpeng Zhao, Shanyan Guan, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Yanhao Ge, Wei Li, Xiaokang Yang<br>
-	    [<a target='_blank' href="https://arxiv.org/pdf/2509.24441">PDF</a>]
-		[<a target='_blank' href="https://zyp123494.github.io/NeoWorld.github.io/">Website</a>]
-	</font>
-	</li><br>
-    <li><strong>DimOL: Dimensional Awareness as A New 'Dimension' in Operator Learning</strong><br>
-	<font size="2">Yichen Song, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    [<a target='_blank' href="https://arxiv.org/abs/2410.05894">PDF</a>]
-	    [<a target='_blank' href="https://github.com/Eachen-Soong/DimOL">PyTorch Code</a>]
-	</font>
-	</li><br>
-    <li><strong>ReAugment: Model Zoo-Guided RL for Few-Shot Time Series Augmentation and Forecasting</strong><br>
-	<font size="2">Haochen Yuan, Yutong Wang, Yihong Chen, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
-	    [<a target='_blank' href="https://arxiv.org/abs/2409.06282">PDF</a>]
-	</font>
-	</li>
- </ol>
-	
-<h2>Teaching</strong></h2>
-    <ul>
-	<li>JCCX0021: <i>Fundamentals of Artificial Intelligence (Reinforcement Learning)</i>, 2022-2025 </li>
-	<li>CS0502: <i>Introduction to Computer Science</i>, 2022-2025 </li>  
-<!-- 	<li>AI3603: <i>Artificial Intelligence: Theory and Applications - Reinforcement Learning</i>, 2023- (Co-instructor)</li> -->
-    </ul>	
-	
+    </li>
+  </ul>
+    
+<h2>Teaching</h2>
+    <ul class="info-list">
+    <li>JCCX0021: <i>Fundamentals of Artificial Intelligence (Reinforcement Learning)</i>, 2022-2025 </li>
+    <li>CS0502: <i>Introduction to Computer Science</i>, 2022-2025 </li>  
+</ul>   
+    
 <h2>Research Group</h2>
-    <ul>
+    <ul class="info-list">
     <li>PhD students: 
         Huayu Deng (Co-supervised), <a target='_blank' href="https://scholar.google.com/citations?user=0RMoo8AAAAAJ">Xiangming Zhu</a>, 
-	    <a target='_blank' href="https://qiwang067.github.io/">Qi Wang</a> (Co-supervised), Haochen Yuan, Yumeng He, Yitao Zheng, 
-	    Yichen Song (Co-supervised), Yuetian Wang (Co-supervised), Leyan Zhang, Nantian He</li>
+        <a target='_blank' href="https://qiwang067.github.io/">Qi Wang</a> (Co-supervised), Haochen Yuan, Yumeng He, Yitao Zheng, 
+        Yichen Song (Co-supervised), Yuetian Wang (Co-supervised), Leyan Zhang, Nantian He</li>
     <li>Master students:
         Yanpeng Zhao, Jiajian Li, Yiwei Hao</li>
     <li>Alumni: 
         <a target='_blank' href="https://scholar.google.com/citations?user=7oepLUoAAAAJ">Jingwei Xu</a> (2021),
-	    <a target='_blank' href="https://scholar.google.com/citations?user=aTDDu8UAAAAJ">Wendong Zhang</a> (2023),
-	    Geng Chen (2023),
-	    <a target='_blank' href="https://github.com/syguan96">Shanyan Guan</a> (2024),
-	    Siyu Gao (2024), Haijian Chen (2024), Minting Pan (2025)
+        <a target='_blank' href="https://scholar.google.com/citations?user=aTDDu8UAAAAJ">Wendong Zhang</a> (2023),
+        Geng Chen (2023),
+        <a target='_blank' href="https://github.com/syguan96">Shanyan Guan</a> (2024),
+        Siyu Gao (2024), Haijian Chen (2024), Minting Pan (2025)
     </li>   
     </ul>
 
- <h2>Research Grants</strong></h2>
-    <ul>
-	<li>PI, <i>Visual Intuitive Learning of Fluid Dynamics</i>, NSFC Original Exploratory Program, 2023-2025</li>
-	<li>PI, <i>Predictive Learning from Spatiotemporal Data</i>, NSFC Young Scientists Fund, 2022-2024</li>
-    </ul>
+<!--  <h2>Research Grants</h2>
+    <ul class="info-list">
+    <li>PI, <i>Visual Intuitive Learning of Fluid Dynamics</i>, NSFC Original Exploratory Program, 2023-2025</li>
+    <li>PI, <i>Predictive Learning from Spatiotemporal Data</i>, NSFC Young Scientists Fund, 2022-2024</li>
+    </ul> -->
 
  <h2>Academic Services</h2> 
-	<ul>
-	<li>I serve as an Area Chair at NeurIPS, ICML, and AAAI.</li>
+    <ul class="info-list">
+    <li>I serve as an Area Chair at NeurIPS, ICML, and AAAI.</li>
+    <li>We organized the <a target='_blank' href="https://embodied-world-models.github.io/">NeurIPS 2025 Workshop on Embodied World Models for Decision Making</a>.</li>
     </ul>
 </td></tr>
+
+<script>
+function filterPublications(topic) {
+  const pubs = document.querySelectorAll('.pub-item');
+  const buttons = document.querySelectorAll('.filter-btn');
+
+  // 更新按钮的激活状态
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+    if(btn.getAttribute('onclick').includes(topic)) {
+      btn.classList.add('active');
+    }
+  });
+
+  // 遍历所有论文进行筛选
+  pubs.forEach(pub => {
+    if (topic === 'all') {
+      pub.style.display = 'list-item'; // 恢复为 list-item 以显示黑点
+    } else {
+      const topics = pub.getAttribute('data-topic');
+      if (topics && topics.split(' ').includes(topic)) {
+        pub.style.display = 'list-item'; // 恢复为 list-item 以显示黑点
+      } else {
+        pub.style.display = 'none';
+      }
+    }
+  });
+}
+</script>
+</body>
