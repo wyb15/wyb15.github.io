@@ -55,12 +55,13 @@
       flex: 0 0 180px;
       margin-right: 20px;
     }
-    .pub-img img {
+    .pub-img img, .pub-img video {
       width: 100%;
       height: auto;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       border: 1px solid #eee;
+      display: block;
     }
     .pub-text {
       flex: 1;
@@ -182,7 +183,11 @@
      </li>
       
     <li class="pub-item" data-topic="world-models">
-      <div class="pub-img"><img src="veorl.gif" alt="VeoRL" onerror="this.src='https://via.placeholder.com/180x110?text=Image'"></div>
+      <div class="pub-img">
+        <video autoplay loop muted playsinline onerror="this.style.display='none'">
+          <source src="veorl.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="pub-text">
         <strong>Video-Enhanced Offline Reinforcement Learning: A Model-Based Approach</strong><br>
         Minting Pan, Yitao Zheng, Jiajian Li, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
@@ -243,7 +248,11 @@
      </li>
       
     <li class="pub-item" data-topic="world-models">
-      <div class="pub-img"><img src="lsimagine.gif" alt="LS-Imagine" onerror="this.src='https://via.placeholder.com/180x110?text=Image'"></div>
+      <div class="pub-img">
+        <video autoplay loop muted playsinline onerror="this.style.display='none'">
+          <source src="lsimagine.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="pub-text">
         <strong>Open-World Reinforcement Learning over Long Short-Term Imagination</strong><br>
         Jiajian Li*, Qi Wang*, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xin Jin, Yang Li, Wenjun Zeng, Xiaokang Yang<br>
@@ -255,7 +264,11 @@
     </li>
 
     <li class="pub-item" data-topic="3d-vision world-models">
-      <div class="pub-img"><img src="neoworld.gif" alt="NeoWorld" onerror="this.src='https://via.placeholder.com/180x110?text=Image'"></div>
+      <div class="pub-img">
+        <video autoplay loop muted playsinline onerror="this.style.display='none'">
+          <source src="neoworld.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="pub-text">
         <strong>NeoWorld: Neural Simulation of Explorable Virtual Worlds via Progressive 3D Unfolding</strong><br>
         Yanpeng Zhao, Shanyan Guan, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Yanhao Ge, Wei Li, Xiaokang Yang<br>
@@ -661,7 +674,7 @@
     <ul class="info-list">
     <li>JCCX0021: <i>Fundamentals of Artificial Intelligence (Reinforcement Learning)</i>, 2022-2025 </li>
     <li>CS0502: <i>Introduction to Computer Science</i>, 2022-2025 </li>  
-</ul>   
+    </ul>   
     
 <h2>Research Group</h2>
     <ul class="info-list">
