@@ -130,11 +130,11 @@
  <h2>Publications</h2>
  <div class="publication-filters">
   <strong>Research Topics: </strong>
-  <a href="javascript:void(0);" class="filter-btn active" onclick="filterPublications('all')">Show All</a> /
-  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('world-models')">RL & World Models</a> /
+  <a href="javascript:void(0);" class="filter-btn active" onclick="filterPublications('world-models')">RL & World Models</a> /
   <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('3d-vision')">3D Vision</a> /
   <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('physics-time-series')">Physics-Informed ML & Time Series</a> /
-  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('others')">Others</a>
+  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('others')">Others</a> /
+  <a href="javascript:void(0);" class="filter-btn" onclick="filterPublications('all')">Show All</a>
 </div>
 
   <ul class="pub-list">
@@ -235,7 +235,11 @@
     </li>
     
     <li class="pub-item" data-topic="3d-vision">
-      <div class="pub-img"><img src="dynavol-s.gif" alt="DynaVol-S" onerror="this.src='https://via.placeholder.com/180x110?text=Image'"></div>
+      <div class="pub-img">
+        <video autoplay loop muted playsinline onerror="this.style.display='none'">
+          <source src="dynavol-s.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="pub-text">
         <strong>Dynamic Scene Understanding through Object-Centric Voxelization and Neural Rendering</strong><br>
         Yanpeng Zhao, Yiwei Hao, Siyu Gao, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
@@ -417,7 +421,11 @@
     </li>
       
     <li class="pub-item" data-topic="3d-vision">
-      <div class="pub-img"><img src="dynaboa.gif" alt="DynaBOA" onerror="this.src='https://via.placeholder.com/180x110?text=Image'"></div>
+      <div class="pub-img">
+        <video autoplay loop muted playsinline onerror="this.style.display='none'">
+          <source src="dynaboa.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="pub-text">
         <strong>Out-of-Domain Human Mesh Reconstruction via Dynamic Bilevel Online Adaptation</strong><br>
         Shanyan Guan, Jingwei Xu, Michelle Z. He, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Bingbing Ni, Xiaokang Yang<br>
@@ -429,7 +437,11 @@
     </li>
 
     <li class="pub-item" data-topic="physics-time-series 3d-vision">
-      <div class="pub-img"><img src="neurofluid.gif" alt="NeuroFluid" onerror="this.src='https://via.placeholder.com/180x110?text=Image'"></div>
+      <div class="pub-img">
+        <video autoplay loop muted playsinline onerror="this.style.display='none'">
+          <source src="neurofluid.mp4" type="video/mp4">
+        </video>
+      </div>
       <div class="pub-text">
         <strong>NeuroFluid: Fluid Dynamics Grounding with Particle-Driven Neural Radiance Fields</strong><br>
         Shanyan Guan, Huayu Deng, <strong>Yunbo Wang</strong><b><span style="font-family:Wingdings">*</span></b>, Xiaokang Yang<br>
@@ -521,7 +533,7 @@
       </div>
     </li>
 
-    <li class="pub-item" data-topic="others">
+    <li class="pub-item" data-topic="physics-time-series">
       <div class="pub-img"><img src="phd_thesis.jpg" alt="PhD Thesis" onerror="this.src='https://via.placeholder.com/180x110?text=Image'"></div>
       <div class="pub-text">
         <strong>Deep Predictive Learning: Problems and Methods</strong><br>
@@ -725,5 +737,7 @@ function filterPublications(topic) {
     }
   });
 }
+
+filterPublications('world-models');
 </script>
 </body>
